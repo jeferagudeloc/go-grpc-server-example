@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "./";
+package chat;
+
+message Greeting {
+    string to = 1;
+    string from = 2;
+    string content = 3;
+};
+
+service GreetingService {
+    rpc SendGreetings(Greeting) returns (Greeting){}
+}
